@@ -1,0 +1,20 @@
+@import "variables";
+
+@mixin fontSet($fontFamily: $mainTextFont, $fontSize: $fs-30, $fontWeight: $fw-500, $lineHeight: normal, $fontStyle: normal) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  font-style: $fontStyle;
+}
+
+@mixin theme($bg: $primeBg, $color: $primeText) {
+  color: $color;
+  background-color: $bg;
+}
+
+@mixin displaySettings($display: flex, $align: center, $justify: center) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+}
