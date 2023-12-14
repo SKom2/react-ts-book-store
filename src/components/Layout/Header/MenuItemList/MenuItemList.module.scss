@@ -1,0 +1,9 @@
+@import "@styles/_global.scss";
+
+.menu{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  @include displaySettings();
+  gap: 10px;
+}

@@ -1,0 +1,8 @@
+@import "@styles/_global.scss";
+
+.container{
+  @include theme($bg: $secondaryBg);
+  padding: 40px 60px;
+  border-radius: 50px;
+  height: 100vh;
+}

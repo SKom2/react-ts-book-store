@@ -19,7 +19,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
 
     "baseUrl": "src",
     "paths": {
@@ -31,7 +30,8 @@
       "@assets/*": ["assets/*"],
       "@images/*": ["assets/images/*"],
       "@styles/*": ["assets/styles/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "vite.config.ts",
@@ -39,7 +39,6 @@
     "./setupTests.ts",
     "src",
     "node_modules/vitest/globals.d.ts",
-    "node_modules/vitest/globals.d.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

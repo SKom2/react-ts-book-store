@@ -1,0 +1,9 @@
+@import "@styles/_global.scss";
+
+.pageLinks{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  @include displaySettings();
+  gap: 25px;
+}

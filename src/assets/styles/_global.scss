@@ -7,8 +7,9 @@ body {
   height: 100%;
   margin: 0;
   @include fontSet();
-  @include theme();
+  @include theme($bg: $bodyBg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  padding: 70px;
 }
