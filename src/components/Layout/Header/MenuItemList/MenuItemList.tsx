@@ -8,7 +8,7 @@ const MenuItemList: FC = () => {
     <ul className={styles.menu}>
       {menuItems.map((item) => (
         <li key={item.id}>
-          <MenuItem path={item.path} icon={item.icon} alt={item.alt} />
+          <MenuItem path={item.path} svg={item.svg} />
         </li>
       ))}
     </ul>

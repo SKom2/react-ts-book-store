@@ -18,3 +18,10 @@
   align-items: $align;
   justify-content: $justify;
 }
+
+// HEADER
+
+@mixin transitionSetting() {
+  transition: all 0.3s ease;
+}
+

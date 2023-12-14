@@ -1,20 +1,45 @@
 @import "@styles/_global.scss";
 
-.pageLink{
+.pageLink {
   text-decoration: none;
   @include displaySettings();
   gap: 8px;
   @include fontSet($fontSize: 15px);
   color: $primeText;
   padding: 7px 20px;
+  border-radius: 50px;
+  @include transitionSetting();
 
-  &_icon{
+  &__icon {
     width: 35px;
     height: 35px;
   }
 
-  &_active{
-    border-radius: 50px;
-    @include theme($bg: $primeBtnColor, $color: $secondaryBg)
+  &:hover {
+    .pageLink__icon path {
+      stroke: $globalWhite;
+      fill: $globalWhite;
+    }
+    .pageLink__bookIcon path{
+      fill: none !important;
+      stroke: $globalWhite;
+    }
+  }
+
+  &:not(&_active):hover {
+    @include theme($bg: $secondaryBtnColor, $color: $secondaryBg);
+  }
+
+  &_active {
+    @include theme($bg: $primeBg, $color: $secondaryBg);
+
+    .pageLink__icon path {
+      stroke: $globalWhite;
+      fill: $globalWhite;
+    }
+    .pageLink__bookIcon path{
+      fill: none !important;
+      stroke: $globalWhite;
+    }
   }
 }

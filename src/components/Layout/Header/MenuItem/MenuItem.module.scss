@@ -1,9 +1,31 @@
 @import "@styles/_global.scss";
 
 .menuLink {
+  padding: 10px;
+  border-radius: 50%;
+  @include displaySettings();
 
-  &_icon {
+  &__icon {
     width: 35px;
     height: 35px;
+  }
+
+  &:hover .menuLink__icon path{
+    stroke: $globalWhite;
+    transition: all 0.3s ease;
+  }
+
+  &:not(&_active):hover{
+    @include theme($bg: $secondaryBtnColor, $color: $secondaryBg);
+    transition: all 0.3s ease;
+  }
+
+  &_active {
+    @include theme($bg: $primeBg, $color: $secondaryBg);
+
+    .menuLink__icon path{
+      stroke: $globalWhite;
+      fill: $globalWhite;
+    }
   }
 }

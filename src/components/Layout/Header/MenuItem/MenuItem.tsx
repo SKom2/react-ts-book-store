@@ -1,18 +1,30 @@
 import { type FC } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './MenuItem.module.scss';
 
 interface MenuItemProps {
   path: string;
-  icon: string;
-  alt: string;
+  svg: string;
 }
 
-const MenuItem: FC<MenuItemProps> = ({ path, icon, alt }) => {
+const MenuItem: FC<MenuItemProps> = ({ path, svg }) => {
   return (
-    <Link to={path} className={styles.menuLink}>
-      <img src={icon} alt={alt} className={styles.menuLink_icon} />
-    </Link>
+    <NavLink
+      to={path}
+      className={({ isActive }) =>
+        isActive
+          ? `${styles.menuLink} ${styles.menuLink_active}`
+          : styles.menuLink
+      }
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={styles.menuLink__icon}
+        dangerouslySetInnerHTML={{ __html: svg }}
+      />
+    </NavLink>
   );
 };
 

@@ -10,9 +10,9 @@ const PageLinksList: FC = () => {
         <li key={link.id}>
           <PageLink
             path={link.path}
-            icon={link.icon}
-            alt={link.alt}
             title={link.title}
+            svg={link.svg}
+            customStyle={link.customStyle}
           />
         </li>
       ))}
