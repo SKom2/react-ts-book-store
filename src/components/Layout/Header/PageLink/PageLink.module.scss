@@ -16,18 +16,22 @@
   }
 
   &:hover {
+    @include transitionSetting();
     .pageLink__icon path {
       stroke: $globalWhite;
       fill: $globalWhite;
+      @include transitionSetting();
     }
     .pageLink__bookIcon path{
       fill: none !important;
       stroke: $globalWhite;
+      @include transitionSetting();
     }
   }
 
   &:not(&_active):hover {
     @include theme($bg: $secondaryBtnColor, $color: $secondaryBg);
+    @include transitionSetting();
   }
 
   &_active {
@@ -41,5 +45,21 @@
       fill: none !important;
       stroke: $globalWhite;
     }
+  }
+}
+
+@media screen and (max-width: $Tablet) {
+  .pageLink{
+
+      &__icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: $Mobile) {
+  .pageLink{
+    padding: 10px;
   }
 }

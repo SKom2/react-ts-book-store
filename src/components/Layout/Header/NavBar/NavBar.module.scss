@@ -1,0 +1,16 @@
+@import "@styles/_global.scss";
+
+.navBar{
+  @include displaySettings();
+  gap: 20px;
+  @media screen and (max-width: $Mobile) {
+    gap: 0;
+  }
+
+  .burgerMenu{
+    position: relative;
+    @include displaySettings();
+    width: 60px;
+  }
+}
+

@@ -12,4 +12,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   padding: 70px;
+
+  @media screen and (max-width: $Tablet) {
+    padding: 30px;
+  }
+
+  @media screen and (max-width: $Mobile) {
+    padding: 20px 10px 0;
+  }
 }
+

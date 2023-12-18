@@ -6,4 +6,17 @@
   margin: 0;
   @include displaySettings();
   gap: 25px;
+
+  @media screen and (max-width: $Tablet) {
+    gap: 15px;
+  }
+
+  @media screen and (max-width: $TabletS) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: $Mobile) {
+    flex-direction: row;
+    gap: 10px;
+  }
 }

@@ -4,6 +4,7 @@
   padding: 10px;
   border-radius: 50%;
   @include displaySettings();
+  @include transitionSetting();
 
   &__icon {
     width: 35px;
@@ -12,12 +13,12 @@
 
   &:hover .menuLink__icon path{
     stroke: $globalWhite;
-    transition: all 0.3s ease;
+    @include transitionSetting();
   }
 
   &:not(&_active):hover{
     @include theme($bg: $secondaryBtnColor, $color: $secondaryBg);
-    transition: all 0.3s ease;
+    @include transitionSetting();
   }
 
   &_active {
@@ -26,6 +27,16 @@
     .menuLink__icon path{
       stroke: $globalWhite;
       fill: $globalWhite;
+    }
+  }
+}
+
+@media screen and (max-width: $Tablet) {
+  .menuLink{
+
+    &__icon{
+      width: 25px;
+      height: 25px;
     }
   }
 }

@@ -28,6 +28,7 @@
       "@types/*": ["types/*"],
       "@hooks/*": ["hooks/*"],
       "@assets/*": ["assets/*"],
+      "@context/*": ["context/*"],
       "@images/*": ["assets/images/*"],
       "@styles/*": ["assets/styles/*"]
     },

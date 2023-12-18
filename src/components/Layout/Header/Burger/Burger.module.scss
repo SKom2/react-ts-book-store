@@ -1,0 +1,76 @@
+@import "@styles/_global.scss";
+
+.burger{
+  display: none;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: $Tablet) {
+  .burger{
+    @include displaySettings();
+
+    .ham {
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      border-radius: 50%;
+      height: 60px;
+
+      &.active {
+        background-color: $primeBg;
+        transition: background-color .3s ease;
+
+        .top {
+          stroke-dashoffset: -98px;
+          stroke: $globalWhite;
+          opacity: 1 !important;
+        }
+
+        .middle {
+          stroke: $globalWhite;
+        }
+
+        .bottom {
+          stroke: $globalWhite;
+          stroke-dashoffset: -138px;
+        }
+      }
+
+      &.hamRotate.active {
+        transform: rotate(45deg);
+      }
+
+      &.hamRotate180.active {
+        transform: rotate(180deg);
+      }
+
+      .line {
+        fill: none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke: $primeText;
+        stroke-width: 4.5;
+        stroke-linecap: round;
+
+        &.top {
+          stroke-dasharray: 40 139;
+          opacity: .5;
+        }
+
+        &.bottom {
+          stroke-dasharray: 40 180;
+          opacity: .5;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $Mobile) {
+  .ham{
+    width: 50px;
+  }
+}

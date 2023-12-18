@@ -1,0 +1,24 @@
+@import "@styles/_global.scss";
+
+.logo{
+  display: block;
+  width: 80px;
+  overflow: visible;
+
+  @media screen and (max-width: $Tablet) {
+    width: 65px;
+  }
+
+  @media screen and (max-width: $Mobile) {
+    width: 50px;
+  }
+
+  &:hover .logo__circle {
+    transform: scale(1.2);
+  }
+
+  &__circle {
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+}

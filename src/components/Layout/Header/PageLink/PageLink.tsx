@@ -1,6 +1,8 @@
-import { type FC } from 'react';
+import { type FC, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import WindowDimensionsContext from '@context/WindowDimensions/WindowDimensionsContext';
 import styles from './PageLink.module.scss';
+import { Mobile } from '@data/windowDimensions';
 
 interface PageLinkProps {
   path: string;
@@ -10,6 +12,8 @@ interface PageLinkProps {
 }
 
 const PageLink: FC<PageLinkProps> = ({ path, title, svg, customStyle }) => {
+  const { width } = useContext(WindowDimensionsContext);
+
   return (
     <NavLink
       to={path}
@@ -26,7 +30,7 @@ const PageLink: FC<PageLinkProps> = ({ path, title, svg, customStyle }) => {
         className={`${styles.pageLink__icon} ${styles[customStyle]}`}
         dangerouslySetInnerHTML={{ __html: svg }}
       />
-      {title}
+      {width >= Mobile && title}
     </NavLink>
   );
 };
