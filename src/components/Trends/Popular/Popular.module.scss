@@ -1,0 +1,39 @@
+@import "@styles/_global.scss";
+
+.popular{
+  height: 100%;
+  @include displaySettings();
+  gap: 50px;
+
+  .firstCardInfo{
+    background-color: $secondaryBtnColor;
+
+    h2{
+      color: $globalWhite;
+    }
+
+    p{
+      color: $primeText;
+    }
+  }
+
+  .secondCardInfo{
+    background-color: $globalWhite;
+
+    h2{
+      color: $primeText;
+    }
+  }
+}
+
+.popularCard__image{
+  width: 100%;
+  height: 145px;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0px;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}

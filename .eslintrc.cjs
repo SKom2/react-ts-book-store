@@ -48,6 +48,7 @@ module.exports = {
           "endOfLine": "auto"
         }
       ],
-      "@typescript-eslint/strict-boolean-expressions": 0
+      "@typescript-eslint/strict-boolean-expressions": 0,
+      "react/no-children-prop": ["off"]
     },
 }

@@ -8,7 +8,7 @@ import styles from './App.module.scss';
 export const App: FC = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/books" element={<Home />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

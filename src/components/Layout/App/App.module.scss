@@ -2,16 +2,6 @@
 
 .container{
   @include theme($bg: $secondaryBg);
-  padding: 40px 60px;
   border-radius: 50px;
-  height: 100vh;
-
-  @media screen and (max-width: $Tablet){
-    padding: 35px 40px;
-  }
-
-  @media screen and (max-width: $Mobile) {
-    padding: 30px 20px;
-  }
 }
 

@@ -7,8 +7,8 @@
   @include transitionSetting();
 
   &__icon {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
   }
 
   &:hover .menuLink__icon path{
@@ -27,16 +27,6 @@
     .menuLink__icon path{
       stroke: $globalWhite;
       fill: $globalWhite;
-    }
-  }
-}
-
-@media screen and (max-width: $Tablet) {
-  .menuLink{
-
-    &__icon{
-      width: 25px;
-      height: 25px;
     }
   }
 }

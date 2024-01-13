@@ -7,9 +7,11 @@ import styles from './Header.module.scss';
 const Header: FC = () => {
   return (
     <header className={styles.header}>
-      <Logo />
-      <PageLinksList />
-      <NavBar />
+      <div className={styles.header__container}>
+        <Logo />
+        <PageLinksList />
+        <NavBar />
+      </div>
     </header>
   );
 };

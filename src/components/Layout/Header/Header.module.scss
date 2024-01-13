@@ -1,6 +1,15 @@
 @import "@styles/_global.scss";
 
-.header{
+.header__container{
   @include displaySettings($justify: space-between);
   position: relative;
+  padding: 40px 60px;
+
+  @media screen and (max-width: $Tablet){
+    padding: 35px 40px;
+  }
+
+  @media screen and (max-width: $Mobile){
+    padding: 30px 20px;
+  }
 }

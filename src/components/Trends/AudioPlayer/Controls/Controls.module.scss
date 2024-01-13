@@ -1,0 +1,14 @@
+@import "@styles/_global.scss";
+
+.controls{
+  margin-top: 10px;
+  @include displaySettings();
+  gap: 10px;
+}
+
+.control_button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}

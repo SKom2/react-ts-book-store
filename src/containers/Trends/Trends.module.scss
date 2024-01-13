@@ -1,0 +1,9 @@
+@import "@styles/_global.scss";
+
+.trends__container{
+  @include displaySettings($justify: space-between);
+  padding: 20px 100px 0;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}

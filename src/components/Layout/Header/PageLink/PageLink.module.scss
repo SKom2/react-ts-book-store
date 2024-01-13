@@ -11,8 +11,8 @@
   @include transitionSetting();
 
   &__icon {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
   }
 
   &:hover {
@@ -44,16 +44,6 @@
     .pageLink__bookIcon path{
       fill: none !important;
       stroke: $globalWhite;
-    }
-  }
-}
-
-@media screen and (max-width: $Tablet) {
-  .pageLink{
-
-      &__icon {
-      width: 25px;
-      height: 25px;
     }
   }
 }

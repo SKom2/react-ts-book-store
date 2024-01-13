@@ -1,0 +1,23 @@
+@import "@styles/_global.scss";
+
+.shelf {
+  position: relative;
+  left: -52px;
+  background-color: #F4EDE7;
+  height: 20px;
+  width: 108%;
+  border-radius: 5px;
+  filter: drop-shadow(7px 54px 15px rgba(0, 0, 0, 0.2));
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 3px;
+    border-bottom: 2px solid white;
+    top: -44px;
+    width: 100%;
+    height: 45px;
+    background: #e6e0dc;
+    clip-path: polygon(4% 0%, 96% 0%, 100% 100%, 0% 100%);
+  }
+}

@@ -26,7 +26,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <div className={styles.navBar}>
+    <nav className={styles.navBar}>
       {width > Tablet && (
         <Menu
           isActive={isActive}
@@ -46,7 +46,7 @@ const NavBar: React.FC = () => {
           />
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 
