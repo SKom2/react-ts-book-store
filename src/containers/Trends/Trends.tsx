@@ -10,7 +10,7 @@ const Trends: React.FC = () => {
     <section className={styles.trends}>
       <div className={styles.trends__container}>
         <Explorer />
-        <Book bookImage={BookImage} />
+        <Book bookImage={BookImage} customBookClass={styles.trends__book}/>
         <Popular />
       </div>
     </section>

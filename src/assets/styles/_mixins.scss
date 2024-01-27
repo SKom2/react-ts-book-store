@@ -21,7 +21,11 @@
 
 // HEADER
 
-@mixin transitionSetting() {
-  transition: all 0.3s ease;
+@mixin transitionSetting($transition: all 0.3s ease) {
+  transition: $transition;
 }
 
+@mixin borderSetting($border, $radius){
+  border: $border;
+  border-radius: $radius;
+}

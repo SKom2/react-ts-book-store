@@ -1,0 +1,61 @@
+@import "@styles/_global.scss";
+
+.bookCard{
+  @include displaySettings();
+  gap: 40px;
+  height: 200px;
+
+  &__cover{
+    height: 97%;
+    min-width: 140px;
+  }
+
+  &__info{
+    cursor: default;
+    height: 100%;
+    @include displaySettings($justify: space-between, $align: initial);
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  &__headingInfo{
+    min-width: 110px;
+    @include displaySettings($align: start);
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__rate, &__name, &__author{
+    margin: 0;
+    padding: 0;
+  }
+
+  &__rate{
+    @include displaySettings();
+    gap: 6px;
+  }
+
+  &__name{
+    @include fontSet($fontSize: 15px, $fontWeight: $fw-700)
+  }
+
+
+  &__author{
+    @include fontSet($fontSize: 13px, $fontWeight: $fw-500);
+    color: $secondaryText;
+  }
+
+  &__buyBtn{
+    height: 30px;
+    color: $secondaryBtnColor;
+    cursor: pointer;
+    @include fontSet($fontSize: 13px, $fontWeight: $fw-700);
+    @include borderSetting($border: 2px solid $secondaryBtnColor, $radius: 30px);
+    @include transitionSetting();
+
+    &:hover{
+      @include theme($bg: $primeBg, $color: $globalWhite);
+      @include borderSetting($border: 2px solid $globalWhite, $radius: 30px);
+    }
+  }
+}

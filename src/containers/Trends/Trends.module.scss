@@ -1,9 +1,15 @@
 @import "@styles/_global.scss";
 
-.trends__container{
-  @include displaySettings($justify: space-between);
-  padding: 20px 100px 0;
-  gap: 80px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+.trends {
+
+  &__container{
+    @include displaySettings($justify: space-between);
+    padding: 20px 100px 0;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
+
+  &__book{
+    box-shadow: 6px -3px 0px -2px rgb(255, 255, 255), 8px -4px 0px -1px rgb(193, 189, 21);
+  }
 }

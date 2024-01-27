@@ -1,0 +1,19 @@
+@import "@styles/_global.scss";
+
+.bookStore{
+
+  &__container{
+    padding: 90px 100px;
+    @include displaySettings($align: start);
+    gap: 20px;
+    height: 200px;
+  }
+
+  &__title{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    padding: 0;
+    margin: 0;
+    @include fontSet($fontSize: 16px, $fontWeight: $fw-600);
+  }
+}

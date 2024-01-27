@@ -1,0 +1,10 @@
+@import "@styles/_global.scss";
+
+.bookList{
+  @include displaySettings($justify: start);
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+  gap: 70px;
+}

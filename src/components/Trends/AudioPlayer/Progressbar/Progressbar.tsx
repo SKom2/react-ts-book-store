@@ -21,7 +21,10 @@ const Progressbar: React.FC<ProgressBarTypes> = ({
   };
 
   return (
-    <div className={styles.progressbar}>
+    <div
+      className={styles.progressbar}
+
+    >
       <input
         type="range"
         min="1"
@@ -30,8 +33,10 @@ const Progressbar: React.FC<ProgressBarTypes> = ({
         step="0.25"
         onChange={handleSliderChange}
         className={styles.progressbar__slider}
+        style={{
+          background: `linear-gradient(to right, #A97049FF 0%, #A97049FF calc(${progress}% - 5px), #F3E4CFFF calc(${progress}%), #F3E4CFFF 100%)`,
+        }}
       />
-      <div className={styles.progressbar__circle} />
     </div>
   );
 };

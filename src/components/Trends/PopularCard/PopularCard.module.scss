@@ -15,8 +15,6 @@
     padding: 0;
     margin: 0;
     @include fontSet($fontSize: 16px);
-    display: inline-block;
-    justify-content: right;
     text-align: right;
   }
 
