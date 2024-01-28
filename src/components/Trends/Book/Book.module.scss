@@ -1,13 +1,16 @@
+@import "@styles/_global.scss";
+
 .book {
   position: relative;
   border-radius: 10px;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 380px;
   min-width: 271px;
   z-index: 1;
-  box-shadow: 6px -3px 0px -2px rgb(255, 255, 255), 8px -4px 0px -1px rgb(193, 189, 21);
+  box-shadow: 6px -3px 0px -2px rgb(255, 255, 255), 8px -4px 0px -1px rgb(169, 169, 169);
+  @include transitionSetting();
 
   &::after{
     content: "";
@@ -20,6 +23,10 @@
     background: rgba(0, 0, 0, 0.12);
     filter: blur(8px);
     clip-path: polygon(0% 2%, 300% 30%, 180% 93%, 0% 99%);
+  }
+
+  &_rotated{
+    transform: rotate(10deg);
   }
 }
 

@@ -3,17 +3,18 @@
 .bookStore{
 
   &__container{
+    position: relative;
     padding: 90px 100px;
-    @include displaySettings($align: start);
+    @include displaySettings($align: start, $justify: start);
     gap: 20px;
-    height: 200px;
+    overflow: hidden;
   }
 
   &__title{
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     padding: 0;
-    margin: 0;
+    margin: 10px 0 0;
     @include fontSet($fontSize: 16px, $fontWeight: $fw-600);
   }
 }

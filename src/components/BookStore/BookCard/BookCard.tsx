@@ -7,6 +7,9 @@ interface BookCardTypes {
   stars: number;
   name: string;
   author: string;
+  isSliderBtn?: boolean;
+  onClick?: () => void;
+  isMoving?: boolean;
 }
 
 const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
@@ -16,7 +19,7 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
         <svg key={i} height="20" width="20" data-rating={rating}>
           <polygon
             points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78"
-            style={{ fill: i < rating ? 'gold' : 'grey' }} // Закрашиваем золотом, если индекс меньше рейтинга
+            style={{ fill: i < rating ? 'gold' : 'grey' }}
           />
         </svg>
       ))}
@@ -24,11 +27,27 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
   );
 };
 
-const BookCard: React.FC<BookCardTypes> = ({ cover, stars, name, author }) => {
+const BookCard: React.FC<BookCardTypes> = ({
+  isSliderBtn,
+  cover,
+  stars,
+  name,
+  author,
+  onClick,
+  isMoving,
+}) => {
+  const btnClass =
+    (isSliderBtn && isMoving ? styles.bookCard__btn_moving : '') ||
+    (isSliderBtn ? styles.bookCard__btn : '');
+
   return (
-    <article className={styles.bookCard}>
-      <Book bookImage={cover} customBookClass={styles.bookCard__cover} />
-      <div className={styles.bookCard__info}>
+    <article className={styles.bookCard} onClick={onClick}>
+      <Book
+        bookImage={cover}
+        customBookClass={`${styles.bookCard__cover} ${btnClass}`}
+        isSliderBtn={isSliderBtn}
+      />
+      <div className={`${styles.bookCard__info}`}>
         <div className={styles.bookCard__headingInfo}>
           <p className={styles.bookCard__rate}>
             <StarRating rating={stars} />
@@ -42,6 +61,12 @@ const BookCard: React.FC<BookCardTypes> = ({ cover, stars, name, author }) => {
       </div>
     </article>
   );
+};
+
+BookCard.defaultProps = {
+  isSliderBtn: false,
+  onClick: () => {},
+  isMoving: false,
 };
 
 export default BookCard;
