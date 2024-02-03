@@ -5,12 +5,12 @@ import {
 } from '@components/Trends/AudioPlayer/AudioPlayer.types';
 import styles from './Controls.module.scss';
 
-const Controls: React.FC = ({
+const Controls: React.FC<ControlsTypes> = ({
   isPlaying,
   onPlayClick,
   onPrevClick,
   onNextClick,
-}: ControlsTypes) => {
+}) => {
   return (
     <div className={styles.controls}>
       <ControlButton onClick={onPrevClick}>
@@ -85,22 +85,14 @@ const Controls: React.FC = ({
 
 export default Controls;
 
-const ControlButton: React.FC = ({
-  onClick,
-  className,
-  children,
-}: ImageButtonProps) => {
+const ControlButton: React.FC<ImageButtonProps> = ({ onClick, children }) => {
   return (
     <button
       type="button"
-      className={`${styles.control_button} ${className}`}
+      className={`${styles.control_button}`}
       onClick={onClick}
     >
       {children}
     </button>
   );
-};
-
-ControlButton.defaultProps = {
-  className: '',
 };

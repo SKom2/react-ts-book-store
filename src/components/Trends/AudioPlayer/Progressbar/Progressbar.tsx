@@ -13,18 +13,15 @@ const Progressbar: React.FC<ProgressBarTypes> = ({
     setProgress((currentTime / duration) * 100);
   }, [currentTime, duration]);
 
-  const handleSliderChange = (e): void => {
-    const newProgress = e.target.value;
+  const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const newProgress = Number(e.target.value);
     setProgress(newProgress);
     const newTime = (newProgress / 100) * duration;
     onSeek(newTime);
   };
 
   return (
-    <div
-      className={styles.progressbar}
-
-    >
+    <div className={styles.progressbar}>
       <input
         type="range"
         min="1"

@@ -2,16 +2,6 @@ import React from 'react';
 import Book from '@components/Trends/Book/Book';
 import styles from './BookCard.module.scss';
 
-interface BookCardTypes {
-  cover: string;
-  stars: number;
-  name: string;
-  author: string;
-  isSliderBtn?: boolean;
-  onClick?: () => void;
-  isMoving?: boolean;
-}
-
 const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
   return (
     <>
@@ -27,6 +17,16 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
   );
 };
 
+interface BookCardTypes {
+  cover: string;
+  stars: number;
+  name: string;
+  author: string;
+  isSliderBtn?: boolean;
+  onClick?: () => void;
+  isMoving?: boolean;
+}
+
 const BookCard: React.FC<BookCardTypes> = ({
   isSliderBtn,
   cover,
@@ -36,15 +36,19 @@ const BookCard: React.FC<BookCardTypes> = ({
   onClick,
   isMoving,
 }) => {
-  const btnClass =
-    (isSliderBtn && isMoving ? styles.bookCard__btn_moving : '') ||
-    (isSliderBtn ? styles.bookCard__btn : '');
+  const getBtnClass = (): string => {
+    if (isSliderBtn) {
+      return isMoving ? styles.bookCard__btn_moving : styles.bookCard__btn;
+    }
+    return '';
+  };
+  const btnClass = `${styles.bookCard__cover} ${getBtnClass()}`;
 
   return (
     <article className={styles.bookCard} onClick={onClick}>
       <Book
         bookImage={cover}
-        customBookClass={`${styles.bookCard__cover} ${btnClass}`}
+        customBookClass={btnClass}
         isSliderBtn={isSliderBtn}
       />
       <div className={`${styles.bookCard__info}`}>
