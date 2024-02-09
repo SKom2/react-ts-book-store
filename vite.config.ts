@@ -17,9 +17,4 @@ export default defineConfig({
       '@styles': '/src/assets/styles',
     },
   },
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./src/setupTests.ts'],
-  },
 });

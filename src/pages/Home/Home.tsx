@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import { type FC } from 'react';
 import Shelf from '@components/Shelf/Shelf';
 import styles from './Home.module.scss';
 import Trends from '../../containers/Trends/Trends';

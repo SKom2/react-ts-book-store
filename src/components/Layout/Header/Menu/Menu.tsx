@@ -1,11 +1,13 @@
 import React from 'react';
-import MenuItem from '@components/Layout/Header/MenuItem/MenuItem';
+import MenuItem, {
+  type MenuItemProps,
+} from '@components/Layout/Header/MenuItem/MenuItem';
 import styles from './Menu.module.scss';
 
 interface MenuProps {
   isActive: boolean;
   getItemStyle: (id: number) => React.CSSProperties;
-  menuItems: MenuItem[];
+  menuItems: MenuItemProps[];
 }
 
 const Menu: React.FC<MenuProps> = ({ isActive, getItemStyle, menuItems }) => {
@@ -13,13 +15,13 @@ const Menu: React.FC<MenuProps> = ({ isActive, getItemStyle, menuItems }) => {
     <ul
       className={`${styles.menuList} ${isActive ? styles.menuList_active : ''}`}
     >
-      {menuItems.map((item) => (
+      {menuItems.map((item, index) => (
         <li
           key={item.id}
           className={`${styles.menuList__item} ${
             isActive ? styles.menuList__item_active : ''
           }`}
-          style={getItemStyle(item.id)}
+          style={getItemStyle(index + 1)}
         >
           <MenuItem path={item.path} svg={item.svg} />
         </li>

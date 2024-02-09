@@ -1,8 +1,14 @@
-import { type FC, useMemo } from 'react';
+import { type FC, type ReactNode, useMemo } from 'react';
 import useWindowDimensions from '@hooks/useWindowDimensions';
 import WindowDimensionsContext from '@context/WindowDimensions/WindowDimensionsContext';
 
-const WindowDimensionsProvider: FC = ({ children }) => {
+interface WindowDimensionsProviderProps {
+  children: ReactNode;
+}
+
+const WindowDimensionsProvider: FC<WindowDimensionsProviderProps> = ({
+  children,
+}) => {
   const dimensions = useWindowDimensions();
 
   const contextValue = useMemo(() => {

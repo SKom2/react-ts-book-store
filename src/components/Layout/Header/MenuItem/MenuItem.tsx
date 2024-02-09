@@ -2,7 +2,8 @@ import { type FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './MenuItem.module.scss';
 
-interface MenuItemProps {
+export interface MenuItemProps {
+  id?: number;
   path: string;
   svg: string;
 }

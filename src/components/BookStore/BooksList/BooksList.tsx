@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import productCards from '@data/sliderData';
+import productCards from '@data/sliderData.ts';
 import BookCard from '@components/BookStore/BookCard/BookCard';
 import styles from './BooksList.module.scss';
 
