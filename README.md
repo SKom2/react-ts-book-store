@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# React Book Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Built With
 
-Currently, two official plugins are available:
+- React
+- Vite
+- TypeScript
+- SCSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Interactive hover animations
+- Custom-made book slider
+- Built-in audiobook player
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Roadmap
 
-- Configure the top-level `parserOptions` property like this:
+Future enhancements planned for the project include:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- User account and authentication system for personalized experiences
+- Expansion of the book database to include more genres and authors
+- Development of a recommendation engine based on user preferences and browsing history
+- Mobile-responsive design to ensure accessibility on smartphones and tablets
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Setup
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the server: `npm run dev`
+
+## Contribute
+
+Feel free to fork the project and submit pull requests.
+
+![BookStore](https://github.com/SKom2/react-ts-book-store/assets/103752057/43bd4352-f12f-42fa-a86f-996243eb2245)
