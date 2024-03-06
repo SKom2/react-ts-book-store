@@ -28,8 +28,5 @@ Future enhancements planned for the project include:
 2. Install dependencies: `npm install`
 3. Start the server: `npm run dev`
 
-## Contribute
-
-Feel free to fork the project and submit pull requests.
 
 ![BookStore](https://github.com/SKom2/react-ts-book-store/assets/103752057/43bd4352-f12f-42fa-a86f-996243eb2245)
