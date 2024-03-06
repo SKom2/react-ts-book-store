@@ -1,5 +1,8 @@
 # React Book Store
 
+![image](https://github.com/SKom2/react-ts-book-store/assets/103752057/1265a0cb-4338-49dd-b0b7-bdd58fd50c4c)
+
+
 ## Built With
 
 - React
@@ -12,6 +15,7 @@
 - Interactive hover animations
 - Custom-made book slider
 - Built-in audiobook player
+- Beautiful layout made from a picture
 
 ## Roadmap
 
