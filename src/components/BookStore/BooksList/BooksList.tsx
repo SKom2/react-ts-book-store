@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import productCards from '@data/sliderData.ts';
 import BookCard from '@components/BookStore/BookCard/BookCard';
 import styles from './BooksList.module.scss';
+import windowDimensionsContext from '@context/WindowDimensions/WindowDimensionsContext.tsx';
 
 interface ProductCard {
   id: number;
@@ -15,7 +16,11 @@ const BooksList: React.FC = () => {
   const [productCardsArr, setProductCardsArr] =
     useState<ProductCard[]>(productCards);
   const [moving, setMoving] = useState<boolean>(false);
+  const { width } = useContext(windowDimensionsContext);
   const isSliderBtn = (index: number): boolean => {
+    if (width > 1850) {
+      return (index + 1) % 5 === 0;
+    }
     return (index + 1) % 4 === 0;
   };
   const handleBtnClick = (): void => {
