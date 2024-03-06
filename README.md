@@ -32,4 +32,4 @@ Future enhancements planned for the project include:
 2. Install dependencies: `npm install`
 3. Start the server: `npm run dev`
 
-![BookStore-Made-with-Clipchamp](https://github.com/SKom2/react-ts-book-store/assets/103752057/153a4814-8a8e-4462-9b0f-45c7c672c38b)
+![BookStore](https://github.com/SKom2/react-ts-book-store/assets/103752057/c20e116b-37e0-484f-b6f5-b9e2263dc38d)
